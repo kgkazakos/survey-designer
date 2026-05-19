@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "survey-designer"
+version = "0.1.0"
+description = "AI-assisted survey question generation with bias detection and response-scale validation. Part of the CPR Orbital Series."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Kostas Kazakos", email = "kgkazakos@users.noreply.github.com" }
+]
+keywords = [
+    "uxr",
+    "survey",
+    "research",
+    "bias-detection",
+    "computational-product-research",
+    "cpr"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "dspy-ai>=2.5",
+    "litellm>=1.40",
+    "streamlit>=1.32",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+survey-designer = "survey_designer.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/kgkazakos/survey-designer"
+Repository = "https://github.com/kgkazakos/survey-designer"
+"CPR Orbital Series" = "https://github.com/kgkazakos"
+
+[tool.setuptools.packages.find]
+include = ["survey_designer*"]
+exclude = ["tests*", "examples*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]

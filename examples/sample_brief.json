@@ -1,0 +1,18 @@
+{
+  "topic": "our new analytics dashboard",
+  "objectives": [
+    "Measure satisfaction with the redesigned dashboard",
+    "Identify main barriers to daily use",
+    "Estimate likelihood to recommend"
+  ],
+  "audience": "Active users in the last 30 days",
+  "constructs": [
+    "satisfaction",
+    "usability",
+    "barriers",
+    "recommendation",
+    "frequency"
+  ],
+  "method_notes": "Online survey, single-wave, ~5 minute target completion time.",
+  "desired_length": 10
+}
