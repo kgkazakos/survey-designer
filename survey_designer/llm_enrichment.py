@@ -22,7 +22,7 @@ except ImportError:  # pragma: no cover - exercised in environments without dspy
 
 SUPPORTED_BACKENDS = {
     "anthropic/claude-opus-4-7": "ANTHROPIC_API_KEY",
-    "gemini/gemini-3.1-pro": "GEMINI_API_KEY",
+    "gemini/gemini-4-argon": "GEMINI_API_KEY",
     "openai/gpt-5.5": "OPENAI_API_KEY",
 }
 

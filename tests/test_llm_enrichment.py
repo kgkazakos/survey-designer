@@ -8,7 +8,7 @@ from survey_designer.models import BiasFlag, SurveyQuestion
 
 def test_supported_backends_contains_three_models():
     assert "anthropic/claude-opus-4-7" in llm_enrichment.SUPPORTED_BACKENDS
-    assert "gemini/gemini-3.1-pro" in llm_enrichment.SUPPORTED_BACKENDS
+    assert "gemini/gemini-4-argon" in llm_enrichment.SUPPORTED_BACKENDS
     assert "openai/gpt-5.5" in llm_enrichment.SUPPORTED_BACKENDS
 
 

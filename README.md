@@ -59,7 +59,7 @@ LLM enrichment is **on by default**. Three backends are supported:
 | Model | Env var |
 |---|---|
 | `anthropic/claude-opus-4-7` *(default)* | `ANTHROPIC_API_KEY` |
-| `gemini/gemini-3.1-pro` | `GEMINI_API_KEY` |
+| `gemini/gemini-4-argon` | `GEMINI_API_KEY` |
 | `openai/gpt-5.5` | `OPENAI_API_KEY` |
 
 If no key is configured, the tool falls back to its rule-based output and the `llm_*` fields in the JSON are `null`. Nothing breaks.
@@ -79,7 +79,7 @@ survey-designer backends   # see which backends are available
 survey-designer generate --brief brief.json --output survey.json
 
 # Pick a specific backend
-survey-designer generate --brief brief.json --llm-backend gemini/gemini-3.1-pro
+survey-designer generate --brief brief.json --llm-backend gemini/gemini-4-argon
 
 # Disable LLM entirely (rule-based only)
 survey-designer generate --brief brief.json --no-llm
